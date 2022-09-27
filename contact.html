@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Adarsh</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Kumb Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background: #131313;
+            opacity: 0.75;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+
+        }
+
+        .navbar_container {
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+            z-index: 1;
+            width: 100%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 50px;
+        }
+
+        #navbar_logo {
+            background-color: #ff8177;
+            background-image: linear-gradient(to top, #ff2323 0%, #f8e115 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 2rem;
+        }
+
+        .navbar_menu {
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+
+        .navbar_item {
+            height: 80px;
+        }
+
+        .navbar_links {
+            width: 125px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        #contact-page {
+            color: #fd8239;
+        }
+
+        .navbar_links:hover {
+            color: #fd8239;
+            transform: scaleX(1.075);
+            transition: all 0.3s ease;
+        }
+
+
+
+        @media screen and (max-width: 960px) {
+            .navbar__container {
+                display: flex;
+                justify-content: space-between;
+                height: 80px;
+                z-index: 1;
+                width: 100%;
+                max-width: 1300px;
+                padding: 0;
+            }
+
+
+            .navbar_menu {
+                display: grid;
+                grid-template-columns: auto;
+                margin: 0;
+                width: 81%;
+                position: absolute;
+                top: -1000px;
+                opacity: 1;
+                transition: all 0.3s ease;
+                z-index: -1;
+            }
+
+            .navbar_menu.active {
+                background-color: #131313;
+                top: 100%;
+                opacity: 1;
+                transition: all 0.3s ease;
+                z-index: 99;
+                height: 60vh;
+                font-size: 1.6rem;
+            }
+
+            #navbar_logo {
+                padding: 25px;
+            }
+
+            .navbar_toggle .bar {
+                width: 25px;
+                height: 3px;
+                margin: 5px auto;
+                transition: all 0.3s ease;
+                background: white;
+                display: block;
+                cursor: pointer;
+                position: relative;
+                top: 20%;
+                right: 5%;
+            }
+
+            .navbar_item {
+                width: 100%;
+            }
+
+            .navbar_links {
+                text-align: center;
+                padding: 2rem;
+                width: 100%;
+                display: table;
+            }
+
+            #mobile_menu.is-active.bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            #mobile_menu.is-active.bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            #mobile_menu.is-active.bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+
+        
+        .contact_info {
+            background-image: url("/myweb/static/contact.jpg");
+            height: 100vh;
+            width: 100vw;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: fixed;
+        }
+        .contact_info1{
+            position: relative;
+            top: 45vh;
+        }
+
+        .phone_no{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            height: 90%;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .phone_no li {
+            list-style: none;
+            font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+        }
+
+        .phone_no li a {
+            display: inline-block;
+            text-decoration: none;
+            color: #131313;
+            font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+        }
+        .phone_no li a:hover {
+            color: #fd8239;
+            transform: scaleX(1.075);
+            transition: all 0.3s ease;
+        }
+        @media screen and (max-width:525px){
+            .contact_info{
+                overflow: scroll;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contact_info">
+        <nav class="navbar">
+            <div class="navbar_container">
+                <a href="/myweb/index.html" id="navbar_logo">Adarsh U G</a>
+                <div class="navbar_toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+                <ul class="navbar_menu">
+                    <li class="navbar_item">
+                        <a href="/myweb/index.html" class="navbar_links" id="home-page">Home</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="/myweb/about.html" class="navbar_links" id="about-page">About</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="/myweb/education.html" class="navbar_links" id="education-page">Education</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="/myweb/contact.html" class="navbar_links" class='active-page'
+                            id="contact-page">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="contact_info1">
+            <div class="phone_no">
+                <ul>
+                    <div>
+                        <li>Phone : <a href="tel:+918861112480">+91 88611 12480</a></li>
+                        <li>email : <a href="mailto:adarshug5262@gmail.com">adarshug5262@gmail.com</a> </li>
+                        <li>Linkedin : <a
+                                href="https://www.linkedin.com/in/adarshug">https://www.linkedin.com/in/adarshug</a>
+                        </li>
+                        <li>Skype : <a
+                                href="https://join.skype.com/invite/yqhuG5LDEjkI">https://join.skype.com/invite/yqhuG5LDEjkI</a>
+                        </li>
+                    </div>
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const menuLinks = document.querySelector('.navbar_menu');
+        const navLogo = document.querySelector('#navbar_logo');
+
+        const mobileMenu = () => {
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
+        };
+
+        menu.addEventListener('click', mobileMenu);
+    </script>
+
+
+</body>
+
+</html>
