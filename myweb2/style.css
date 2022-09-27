@@ -1,0 +1,686 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumb Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#navbar_logo {
+    background-color: #ff8177;
+    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar_item {
+    height: 80px;
+}
+
+.navbar_links {
+    width: 125px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbar_links:hover {
+    color: #9518fc;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+
+    .navbar_menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 81%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.3s ease;
+        z-index: -1;
+    }
+
+    .navbar_menu.active {
+        background-color: #131313;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.3s ease;
+        z-index: 99;
+        height: 60vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar_logo {
+        padding: 25px;
+    }
+
+    .navbar_toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease;
+        background: white;
+        display: block;
+        cursor: pointer;
+        position: relative;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar_item {
+        width: 100%;
+    }
+
+    .navbar_links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile_menu.is-active.bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile_menu.is-active.bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        -webkit-transform: translateY(8px) rotate(45deg);
+        -moz-transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile_menu.is-active.bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        -moz-transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+}
+
+.hov_con:hover {
+    color: #9518fc;
+    transform: scale(1.035);
+    transition: all 0.3s ease;
+}
+
+.main1 {
+    background: #000;
+    background: linear-gradient(to right, #161616, #000);
+    padding: 200px 0;
+}
+
+.main1_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 90%;
+    text-align: center;
+    padding: 30px;
+}
+
+.main1_heading {
+    font-size: 100px;
+    margin-bottom: 24px;
+    color: white;
+}
+
+.main1_heading span {
+    background: #833ab4;
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main1_description {
+    font-size: 60px;
+    background: #da22ff;
+    background: -webkit-linear-gradient(to right, #9114ff, #da22ff);
+    background: linear-gradient(to right, #9114ff, #da22ff);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.highlight {
+    border-bottom: 4px solid rgb(132, 0, 255);
+}
+
+@media screen and (max-width: 700px) {
+    .main1_heading {
+        font-size: 60px;
+    }
+
+    .main1_description {
+        font-size: 40px;
+    }
+}
+
+.main2 {
+    background-color: #131313;
+    padding: 10rem 0;
+}
+
+.main2_content {
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.main2_content h1 {
+    font-size: 2rem;
+    background-color: #fe3b6f;
+    background-image: linear-gradient(to top, #ff087b 0%, #ed1a52 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.main2_content p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+.main2_content p a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+.main1_btn {
+    font-size: 1.8rem;
+    background: #833ab4;
+    background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    padding: 20px 40px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.main1_btn a {
+    position: relative;
+    color: white;
+    z-index: 2;
+    text-decoration: none;
+}
+
+.main1_btn:hover {
+    transform: scale(1.075);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .main2_content {
+        height: 90%;
+        width: 100%;
+    }
+
+    .main2_content p {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1rem;
+        font-weight: 300;
+        margin-top: 1rem;
+    }
+
+    .main2_content p a {
+        font-size: 1rem;
+        padding: 0;
+        overflow: scroll;
+    }
+}
+
+@media only screen and (max-width: 366px) {
+    .main2_content p a {
+        font-size: 0.75rem;
+        padding: 0;
+        overflow: scroll;
+    }
+}
+
+.main3 {
+    background: #000;
+    background: linear-gradient(to right, #161616, #000);
+    padding: 10rem 0;
+}
+
+.main3_content {
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.main3_content h1.edu {
+    font-size: 3rem;
+    background-color: #fe3b6f;
+    background-image: linear-gradient(to top, #ff087b 0%, #ed1a52 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.main_bach1 {
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.main_bach2 {
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.main_bach3 {
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.bach1a {
+    display: inline-block;
+    text-align: right;
+    color: white;
+    padding-right: 7px;
+    padding-bottom: 25px;
+}
+
+.bach1a p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+
+.bach1b p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+
+.bach1c p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+
+.bach2a {
+    display: inline-block;
+    text-align: left;
+    color: white;
+}
+
+.bach2a p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+
+.bach2b p a {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+
+.bach2c p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+
+.vl {
+    display: inline-block;
+    border-left: 2px solid white;
+    height: 103px;
+    padding-right: 7px;
+}
+
+.bach2a p a {
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+    background-color: #fe3b6f;
+    background-image: linear-gradient(to top, #ff087b 0%, #ed1a52 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+.bach2a p a:hover{
+    transform: scaleX(1.075);
+    transition: all 0.3s ease;
+}
+
+.bach1b {
+    display: inline-block;
+    text-align: left;
+    color: white;
+    padding-bottom: 25px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 11px;
+}
+
+.bach2b {
+    display: inline-block;
+    text-align: right;
+    color: white;
+    padding-bottom: 25px;
+    padding-left: 38px;
+    padding-right: 7px;
+}
+
+.v2 {
+    display: inline-block;
+    border-left: 2px solid white;
+    height: 68px;
+    padding-right: 7px;
+}
+
+.bach2b p a {
+    display: inline-block;
+    background-color: #fe3b6f;
+    background-image: linear-gradient(to top, #ff087b 0%, #ed1a52 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+.bach2b p a:hover{
+    transform: scaleX(1.075);
+    transition: all 0.3s ease;
+}
+
+.bach1c {
+    display: inline-block;
+    text-align: right;
+    color: white;
+    padding-right: 7px;
+}
+
+.bach2c {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 53px;
+}
+
+
+.v3 {
+    display: inline-block;
+    border-left: 2px solid white;
+    height: 103px;
+    padding-right: 3px;
+}
+
+.main_bach1 h1 {
+    font-size: 2rem;
+    background: #da22ff;
+    background: -webkit-linear-gradient(to right, #9114ff, #da22ff);
+    background: linear-gradient(to right, #9114ff, #da22ff);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main_bach2 h1 {
+    font-size: 2rem;
+    background: #da22ff;
+    background: -webkit-linear-gradient(to right, #9114ff, #da22ff);
+    background: linear-gradient(to right, #9114ff, #da22ff);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main_bach3 h1 {
+    font-size: 2rem;
+    background: #da22ff;
+    background: -webkit-linear-gradient(to right, #9114ff, #da22ff);
+    background: linear-gradient(to right, #9114ff, #da22ff);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 670px) {
+    .main3_content {
+        height: 100%;
+        width: 100%;
+    }
+
+    .bach1a {
+        position: relative;
+        top: 100px;
+        text-align: center;
+        color: white;
+        display: block;
+    }
+
+    .bach2a {
+        position: relative;
+        top: -160px;
+        text-align: center;
+        color: white;
+        display: block;
+    }
+
+    .bach1b {
+        position: relative;
+        text-align: center;
+        color: white;
+        top: -33px;
+    }
+
+    .bach2b {
+        text-align: center;
+        color: white;
+        padding: 0;
+    }
+
+    .bach1c {
+        position: relative;
+        top: 5px;
+        display: block;
+        text-align: center;
+        color: white;
+    }
+
+    .bach2c {
+        position: relative;
+        top: -206px;
+        text-align: center;
+        color: white;
+    }
+
+    .vl {
+        height: 0px;
+    }
+
+    .v2 {
+        height: 0px;
+    }
+
+    .v3 {
+        height: 0px;
+    }
+
+    .main3_content h1.edu {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 448px) {
+    .main3_content {
+        padding: 0;
+    }
+
+    .bach2a {
+        top: -193px;
+    }
+}
+
+@media only screen and (max-width: 441px) {
+    .bach2a {
+        top: -216px;
+    }
+}
+
+@media only screen and (max-width: 441px) {
+    .bach2a {
+        top: -244px;
+    }
+}
+
+@media only screen and (max-width: 319px) {
+    .bach2c {
+        top: -240px;
+    }
+}
+
+@media only screen and (max-width: 306px) {
+    .bach2a {
+        top: -290px;
+    }
+}
+
+@media only screen and (max-width: 293px) {
+    .bach2c {
+        top: -275px;
+    }
+}
